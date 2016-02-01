@@ -80,7 +80,7 @@ class CategoryController extends BaseController
      */
     public function store(Request $request)
     {
-        $this->authorize('createCategories');
+        $this->authorize('createCategories', $request->input('category_id'));
 
         $this->validate($request, [
             'title'             => ['required'],

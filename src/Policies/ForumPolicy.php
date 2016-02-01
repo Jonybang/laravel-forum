@@ -7,10 +7,11 @@ class ForumPolicy
     /**
      * Permission: Create categories.
      *
-     * @param  object  $user
+     * @param  object   $user
+     * @param  integer  $parent_category_id
      * @return bool
      */
-    public function createCategories($user)
+    public function createCategories($user, $parent_category_id)
     {
         return true;
     }
